@@ -38,54 +38,14 @@
 <!--Body  -->
     <article class="main">  
       <section class="content">
-          <button class="accordion">
-            <h2>Q: How can you print a document from your laptop at HZ?</h2>
-          </button>
-          <div class="drop-down">
-            <p>A: By Simply connecting to one of the printers at school.</p>
-          </div>
-
-          <button class="accordion">
-            <h2>Q: How can you scan a document a send it to your laptop at HZ?</h2>
-          </button>
-          <div class="drop-down">
-            <p>
-              A: Use the same printer, scan your paper and it should added on your pc
-              if you do it right.
-            </p>
-
-          <button class="accordion">
-            <h2>Q: What do you need to do when you are sick / show symptoms of
-              coronavirus?</h2>
-          </button>
-          <div class="drop-down">
-            <p>
-              A: Contact the teachers/helpdesk at school and stay home. Follow the
-              lessons on stream to compensate for that unusual sickness.
-            </p>
-          </div>
-    
-          <button class="accordion">
-            <h2>Q: How can you book a project space in one of the wings?
-            </h2>
+        @foreach($faqs as $faq)
+            <button class="accordion">
+              <h2>Q: {{ $faq->question }}</h2>
             </button>
-          <div class="drop-down">
-            <p>
-              A: You can book a room on the HZ page after logging in by pressing the
-              Selfservice Portal, it should be easy from thereon out.
-            </p>
-          </div>
-      
-          <button class="accordion">
-            <h2>Q: What are the instructions if you want to park your car at the HZ
-              parking lot?</h2>
-          </button>
-          <div class="drop-down">
-            <p>
-              A: You must park your car "across the road", at the parking lot of the
-              former PEZM.
-            </p>
-          </div>
+            <div class="drop-down">
+              <p>A: {{ $faq->answer }}</p>
+            </div>
+        @endforeach
       </section>
   </article>
 
