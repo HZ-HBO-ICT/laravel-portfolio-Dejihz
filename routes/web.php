@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostsController;
+use App\Models\Article;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,8 @@ use App\Http\Controllers\PostsController;
 */
 // Controllers for portfolio pages 
 Route::get('/', [WelcomeController::class, 'show']);
-Route::get('/blog', [BlogController::class, 'show']);
+Route::get('/blog', [BLogController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/faq', [FaqController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
-Route::get('/posts/{post}', [PostsController::class, 'show']);
+Route::get('/blog/{blog}', [BlogController::class, 'showSub']);
