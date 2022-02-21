@@ -21,8 +21,13 @@ use App\Models\Article;
 */
 // Controllers for portfolio pages 
 Route::get('/', [WelcomeController::class, 'show']);
-Route::get('/blog', [BLogController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
+
 Route::get('/faq', [FaqController::class, 'show']);
+Route::post('/faq', [FaqController::class, 'store']);
+Route::get('/faq/create', [FaqController::class, 'create']);
+
 Route::get('/profile', [ProfileController::class, 'show']);
-Route::get('/blog/{blog}', [BlogController::class, 'showSub']);
+
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{blog}', [BlogController::class, 'show']);

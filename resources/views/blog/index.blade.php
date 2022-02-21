@@ -21,7 +21,7 @@
         <article class="second">
           <div class="title"><h2>{{$article->excerpt}}</h2></div>
           <div class="date-desc">
-            <h2>14/09/2021 </h2>
+            <h2>{{$article->created_at}}</h2>
             </div>
             <div class="button1"><button class="button">
               <a href="/blog/{{$article->id}}" class="read">Read more  &gt;</a>

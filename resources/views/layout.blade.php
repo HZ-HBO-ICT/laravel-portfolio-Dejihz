@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     @yield ('title')
-    <link rel="stylesheet" href="*" /> 
+    <link rel="stylesheet" href="/*" /> 
     <link rel="stylesheet" href="{{Request::is('/')  ? '/css/index.css': ''}}">
     <link rel="stylesheet" href="{{Request::is('profile') ? '/css/profile.css': ''}}">
     <link rel="stylesheet" href="{{Request::is('faq') ? '/css/faq.css': ''}}"> 
     <link rel="stylesheet" href="{{Request::is('dashboard') ? '/css/dashboard.css': ''}}"> 
     <link rel="stylesheet" href="{{Request::is('blog') ? '/css/blog.css': ''}}"> 
     <link rel="stylesheet" href="{{Request::is('blog/{blog}') ? '/css/faq.css': ''}}"> 
+    @yield ('link')
 
   </head>
   <body>
@@ -19,20 +20,20 @@
  <!-- Navigation Bar -->
     <nav>
       <div class="home">
-        <a href="./"
+        <a href="/"
           ><img
-            src="./resources/hz-logo.jpg"
+            src="/resources/hz-logo.jpg"
             alt="hz logo takes you to home page"
             id="nav-logo"
         /></a>
       </div>
       <ul class="top-navbar">
-        <li><a href="./profile" class="nav-element">Profile</a></li>
+        <li><a href="/profile" class="nav-element">Profile</a></li>
         <li>
-          <a href="./dashboard" class="nav-element">Dashboard</a>
+          <a href="/dashboard" class="nav-element">Dashboard</a>
         </li>
-        <li><a href="./faq" class="nav-element">FAQ</a></li>
-        <li><a href="./blog" class="nav-element">Blog</a></li>
+        <li><a href="/faq" class="nav-element">FAQ</a></li>
+        <li><a href="/blog" class="nav-element">Blog</a></li>
       </ul>
     </nav>
     

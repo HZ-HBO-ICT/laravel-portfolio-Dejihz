@@ -21,6 +21,9 @@
               <p>A: {{ $faq->answer }}</p>
             </div>
         @endforeach
+        <button class="button">
+              <a href="/faq/create" > Create New FAQ</a>
+            </button>
       </section>
   </article>
 
