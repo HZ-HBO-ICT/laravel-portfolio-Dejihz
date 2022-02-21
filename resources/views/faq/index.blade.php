@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section('title')
-<title>Portfolio | FAQ</title>
+<title>Portfolio | FAQ-Edit</title>
 @endsection
 
 @section ('content')
@@ -19,9 +19,15 @@
             </button>
             <div class="drop-down">
               <p>A: {{ $faq->answer }}</p>
+
+              <p>Link: {{ $faq->link }}</p>
+              <button class="button" style="text-decoration: none;"><a href="/faq/{{$faq->id}}/edit">Edit</a></button>
+              <button class="button" style="text-decoration: none;"><a href="/faq/{{$faq->id}}/delete">Delete</a></button>
             </div>
         @endforeach
-        <button class="button">
+        
+            
+            <button class="button">
               <a href="/faq/create" > Create New FAQ</a>
             </button>
       </section>

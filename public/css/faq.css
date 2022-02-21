@@ -81,10 +81,6 @@ nav ul li {
   padding: 80px;
 }
 
-.formElement{
-  margin-bottom: 20px;
-}
-
 /* Footer */
 .f {
   position: relative;
@@ -108,4 +104,3 @@ nav ul li {
   /* position: relative; */
   /*Sticks to botttom*/
 }
-

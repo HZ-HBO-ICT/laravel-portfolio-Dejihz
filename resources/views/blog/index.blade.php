@@ -8,7 +8,6 @@
 <!-- Main content -->
     <section class="main">
       
-
         <article class="first">
           <div class="title"><h2>Feedback</h2></div>
           <div class="date-desc">

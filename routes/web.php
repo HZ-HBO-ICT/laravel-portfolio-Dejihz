@@ -26,6 +26,11 @@ Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/faq', [FaqController::class, 'show']);
 Route::post('/faq', [FaqController::class, 'store']);
 Route::get('/faq/create', [FaqController::class, 'create']);
+Route::get('/faq/{faq}/edit', [FaqController::class, 'edit']);
+Route::put('/faq', [FaqController::class, 'update']);
+Route::get('/faq/{faq}/delete', [FaqController::class, 'destroy']);
+
+
 
 Route::get('/profile', [ProfileController::class, 'show']);
 

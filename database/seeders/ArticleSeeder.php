@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Database\Factories\BlogFactory;
 use App\Models\Article;
 
 class ArticleSeeder extends Seeder
