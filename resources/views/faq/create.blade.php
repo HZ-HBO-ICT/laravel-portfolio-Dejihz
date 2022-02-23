@@ -25,21 +25,29 @@
         <label class='label' for='question'>Question</label></div>
         <div>
 
-          <textarea name="question" id="question" cols="20" rows="5" placeholder="Your Question "></textarea>
+          <input style="width: 100%" type="text" name="question" id="question" placeholder="Your Question" value="{{old('question')}}">
+
+          @error('question')
+          <p style="color: red">{{$errors->first('question')}}</p>
+          @enderror
+
         </div>
 
         <div class='formElement' style="margin-top: 10px;">
           <label class='label' for='answer'>Answer</label>
         </div>
         <div>
-          <textarea name="answer" id="answer" cols="20" rows="5" placeholder="Your Answer"></textarea>
+          <input style="width: 100%" type="text" name="answer" id="answer" placeholder="Your Answer" value="{{old('answer')}}">
+          @error('answer')
+          <p style="color: red">{{$errors->first('answer')}}</p>
+          @enderror
         </div>
 
         <div class='formElement' style="margin-top: 10px;">
           <label class='label' for='link'>Link</label>
           </div>
         <div>
-          <input class='input' type="text" name="link" id='link'>
+          <input class='input' type="text" name="link" id='link'value="{{old('link')}}">
         </div>
         <div>
           <button type="submit" style="cursor: pointer; border: 2px solid black; font-size: 20px; color: white;background-color: black;">Submit</button>

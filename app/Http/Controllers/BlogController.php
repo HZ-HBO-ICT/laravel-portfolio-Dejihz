@@ -13,16 +13,14 @@ class BlogController extends Controller
     //POST/article/id --> create new resource
     //DELETE/article/id --> delete resource
 
-    public function index(){
+    public function index()
+    {
         //renders list of resourcess
-    return view ('blog.index', [ 'articles' => Article::take(4)->get()
-    ]);//latest()
+    return view ('blog.index', [ 'articles' => Article::take(4)->get()]);
     }
 
-    public function show($id){
-        //show single resource
-        $article = Article::find($id);
-
+    public function show(Article $article)
+    {
         return view('blog.show', ['article' => $article]);
     }
 

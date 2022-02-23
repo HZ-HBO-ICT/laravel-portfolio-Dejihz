@@ -33,18 +33,15 @@ class FaqController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //validation
-        //clean up
-        $faq = new Faq();
+    { //assign and save to ddatabase
 
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
+        Faq::create(request()->validate([
+            'question'=> ['required', 'max:255'],
+            'answer'=> 'required',
+            'link'=> 'min:0'
+        ]));
 
-        $faq->save();
-
-        return redirect('/faq');
+        return redirect(route('faq.show'));
     }
 
     /**
@@ -53,9 +50,8 @@ class FaqController extends Controller
      * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        $faq = Faq::find($id);
         return view('faq.edit', ['faq'=> $faq]);
     }
 
@@ -66,17 +62,16 @@ class FaqController extends Controller
      * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Faq $faq)
     {
-        $faq = Faq::find($id);
 
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
+        $faq->update(request()->validate([
+            'question'=> ['required', 'max:255'],
+            'answer'=> 'required',
+            'link'=> 'min:0'
+        ]));
 
-        $faq->save();
-
-        return redirect('/faq');
+        return redirect(route('faq.show'));
     }
 
     /**
@@ -87,8 +82,8 @@ class FaqController extends Controller
      */
     public function destroy($id)
     {
-        $data =Faq::find($id);
+        $data =Faq::findOrFail($id);
         $data->delete();
-        return redirect('/faq');
+        return redirect(route('faq.show'));
     }
 }

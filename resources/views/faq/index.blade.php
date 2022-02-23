@@ -20,15 +20,16 @@
             <div class="drop-down">
               <p>A: {{ $faq->answer }}</p>
 
-              <p>Link: {{ $faq->link }}</p>
-              <button class="button" style="text-decoration: none;"><a href="/faq/{{$faq->id}}/edit">Edit</a></button>
-              <button class="button" style="text-decoration: none;"><a href="/faq/{{$faq->id}}/delete">Delete</a></button>
+              <p>Link: <a href="{{ $faq->link }}">{{ $faq->link }}</a></p>
+
+              <button  style="cursor: pointer; border: 2px solid black; font-size: 20px; background-color: black;"><a href="{{route('faq.edit',$faq)}}" style="color: white; text-decoration: none; cursor: pointer;">Edit</a></button>
+              <button style="cursor: pointer; border: 2px solid black; font-size: 20px;background-color: red;"><a href="{{route('faq.delete',$faq)}}"style="color: white; text-decoration: none; cursor: pointer;">Delete</a></button>
             </div>
         @endforeach
         
             
-            <button class="button">
-              <a href="/faq/create" > Create New FAQ</a>
+            <button style="cursor: pointer; border: 2px solid black; font-size: 20px;background-color: green;">
+              <a href="/faq/create" style="color: white; text-decoration: none; cursor: pointer;"> Create New FAQ</a>
             </button>
       </section>
   </article>

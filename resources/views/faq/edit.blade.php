@@ -18,7 +18,7 @@
     
 <!--Body  -->
       <section class="content">
-        <form method="POST" action="/faq">
+        <form method="POST" action="{{route('faq.update',$faq)}}">
           @csrf
           @method('PUT')
 
@@ -28,6 +28,9 @@
           <label class='label' for='question'>Question</label></div>
           <div>
           <input class='input' type="text" name="question" id='question' value="{{ $faq->question }}" style="width: 100%">
+          @error('question')
+          <p style="color: red;">{{$errors->first('question')}}</p>
+          @enderror
           </div>
 
           <div class='formElement'>
@@ -35,6 +38,10 @@
           </div>
           <div>
             <input class='input' type="text" name="answer" id='answer' value="{{ $faq->answer }}" style="width: 100%">
+
+          @error('answer')
+          <p style="color: red;">{{$errors->first('answer')}}</p>
+          @enderror
           </div>
 
           <div class='formElement'>
@@ -43,10 +50,8 @@
           <div>
             <input class='input' type="text" name="link" id='link' value="{{ $faq->link }}" style="width: 100%">
           </div>
+          <button type="submit" style="cursor: pointer; border: 2px solid black; font-size: 20px; color: white;background-color: black;">Submit</button>
         </section>
-        <div>
-            <button type="submit" style="cursor: pointer; border: 2px solid black; font-size: 20px; color: white;background-color: black;">Submit</button>
-          </div>
         </form>
       </section>
  

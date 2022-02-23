@@ -23,12 +23,12 @@ use App\Models\Article;
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 
-Route::get('/faq', [FaqController::class, 'show']);
-Route::post('/faq', [FaqController::class, 'store']);
+Route::get('/faq', [FaqController::class, 'show'])->name('faq.show');
+Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
 Route::get('/faq/create', [FaqController::class, 'create']);
-Route::get('/faq/{faq}/edit', [FaqController::class, 'edit']);
-Route::put('/faq', [FaqController::class, 'update']);
-Route::get('/faq/{faq}/delete', [FaqController::class, 'destroy']);
+Route::get('/faq/{faq}/edit', [FaqController::class, 'edit'])->name('faq.edit'); //name wildcat the same in controller RMB
+Route::put('/faq/{faq}', [FaqController::class, 'update'])->name('faq.update');
+Route::get('/faq/{faq}/delete', [FaqController::class, 'destroy'])->name('faq.delete');
 
 
 
