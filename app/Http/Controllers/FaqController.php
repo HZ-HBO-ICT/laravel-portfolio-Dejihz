@@ -13,7 +13,7 @@ class FaqController extends Controller
 
     public function show(){
         $faqs = Faq::all();
-        return view('faq.index', ['faqs'=> $faqs] ); //link to welcome.blade.php
+        return view('faq.index', ['faqs'=> $faqs] ); 
     }
 
     /**

@@ -11,13 +11,15 @@ class Article extends Model
 {
     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'title',
-        'excerpt',
-        'body',
-    ];}
+    // /**
+    //  * The attributes that are mass assignable.
+    //  *
+    //  * @var array
+    //  */
+    // protected $fillable = [
+    //     'title',
+    //     'excerpt',
+    //     'body',
+    // ];
+    protected $guarded = [];
+}

@@ -30,7 +30,7 @@
       <ul class="top-navbar">
         <li><a href="/profile" class="nav-element">Profile</a></li>
         <li>
-          <a href="/dashboard" class="nav-element">Dashboard</a>
+          <a href="{{route('grade.index')}}" class="nav-element">Dashboard</a>
         </li>
         <li><a href="/faq" class="nav-element">FAQ</a></li>
         <li><a href="/blog" class="nav-element">Blog</a></li>

@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use App\Models\Article;
+use App\Models\Grades;
 
-class ArticleFactory extends Factory
+class GradesFactory extends Factory
 {
     /**
      * Define the model's default state.
