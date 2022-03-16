@@ -30,11 +30,14 @@ class GradesController extends Controller
      */
     public function store(Request $request)
     {
-        Grades::create(request()->validate([
+        $created = request()->validate([
             'course_name'=> ['required', 'max:255'],
             'test_name'=> 'required',
-            // Grades:addResult('best_grade')
-        ]));
+            'best_grade' => 'min:0'
+        ]);
+
+        // $grade->addResult($created['best_grade']);
+        Grades::create($created);
 
         return redirect(route('grade.index'));    }
 
@@ -56,13 +59,16 @@ class GradesController extends Controller
      * @param  \App\Models\Grades  $grades
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Grades $grades)
+    public function update(Request $request, Grades $grade)
     {
-        $grade->update(request()->validate([
+        $validated = request()->validate([
             'course_name'=> ['required', 'max:255'],
             'test_name'=> 'required',
             'best_grade' => 'min:0'
-        ]));
+        ]);
+
+        $grade->addResult($validated['best_grade']);
+        $grade-> update($validated);
 
         return redirect(route('grade.index'));    
     }

@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Models\Grades;
+use App\Models\Course;
+
 
 class GradesFactory extends Factory
 {
@@ -18,6 +20,12 @@ class GradesFactory extends Factory
     public function definition()
     {
         return [
+              // 'courses_id'=> Course::factory(),
+              // 'test_name'=> $this->faker->text(),
+              // 'best_grade'=> $this->faker->randomFloat(1,0,10)
         ];
     }
 }
+
+
+            

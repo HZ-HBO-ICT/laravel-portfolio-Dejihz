@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB; //add
 use App\Models\Grades;
-
+use App\Models\Course;
 
 class GradesSeeder extends Seeder
 {
@@ -16,6 +16,7 @@ class GradesSeeder extends Seeder
      */
     public function run()
     {
+        // Grades::factory()->times(10)->create();
         DB::table('grades')->insert([
             'course_name' => 'Quatile 1',
             'test_name' => 'Programme and Career Orientation',
