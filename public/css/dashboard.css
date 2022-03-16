@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* Nav bar */
+body {
+  background-color: #ffffff;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  /* box specific */
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #012a4a;
+
+  padding: 0px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.top-navbar {
+  float: right;
+  line-height: 75px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.nav-element {
+  padding: 0px 50px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-element:hover {
+  color: #a9d6e5;
+}
+
+.nav-element:active {
+  color: black;
+}
+
+/*Img stylng  */
+.home {
+  float: left;
+}
+#nav-logo {
+  line-height: 0px;
+  margin-top: 10px;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  padding-bottom: 0px;
+}
+
+/*Main  */
+.main {
+  min-height: 800px;
+  /* margin-left: 50px; */
+  padding-top: 80px;
+  background-image: url(/resources/index-bg.png);
+}
+/* Table */
+.dashboard {
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  background-color: white;
+  border-spacing: 25p;
+  line-height: 50px;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px 2px black;
+  text-align: center;
+}
+
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 2px solid black;
+}
+
+.table-link {
+  caption-side: bottom;
+}
+
+.caption-link {
+  color: #ffffff;
+}
+
+.caption-link:hover {
+  color: #697ef8;
+}
+
+.caption-link:active {
+  color: #def849;
+}
+
+/* 2nd bodysection */
+
+.section {
+  padding-left: 5%;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  color: white;
+}
+
+.content {
+  background-color: white;
+  min-height: 300px;
+}
+
+.footerItem {
+  margin-left: 25px;
+  padding-top: 25px;
+}
+
+.link {
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: bolder;
+  color: black;
+}
+/* Footer */
+.f {
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+}
+
+.top-footer {
+  background-color: #09283f;
+  color: #ffffff;
+  width: 100%;
+  display: inline-block;
+}
+
+.bottom-footer {
+  background-color: #000000;
+  color: #ffffff;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  /* position: relative; */
+  /*Sticks to botttom*/
+}
